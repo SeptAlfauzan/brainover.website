@@ -1,11 +1,12 @@
 import Head from 'next/head'
-import HomeBanner from '../components/homebanner'
 import Navbar from '../components/navbar'
-import DotsGeometry from '../public/images/illustrations/geometry/dots.svg'
-import Image from 'next/image'
-
+import HomeBanner from '../components/sections/homebanner'
+import About from '../components/sections/about'
+import Work from '../components/sections/work'
 
 const Home = () => {
+  
+
   return (
     <div>
       <Head>
@@ -14,27 +15,11 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className='flex flex-col'>
+      <main className='flex flex-col bg-white'>
         <Navbar />
         <HomeBanner />
-        <div className='min-h-screen flex flex-col justify-center items-center relative border overflow-clip'>
-          <div className='md:w-3/4 flex flex-wrap'>
-            <div className="md:w-1/2 w-full md:px-20 px-12 z-10">
-              <h3 className='text-4xl mb-10 w-full'>Leading the way in our field since 1993</h3>
-              <p className='text-lg text-gray-500'>
-                We are the top supplier of cooked, refrigerated prawns to the French market and as such, we are constantly in the process of improving our product offering to cement our position as the go-to player on the seafood products scene. We’ve succeeded in doing this by maintaining a steady course over the last 27 years towards our end destination – a shared taste for innovation!
-              </p>
-            </div>
-            <div className="md:w-1/2 w-full px-20 flex flex-col md:relative absolute md:bottom-0 bottom-16">
-              <div className='w-44 h-44 md:right-40 -right-20 md:top-0 -top-96 absolute block md:opacity-100 opacity-30'>
-                <Image alt="dots geometry" src={DotsGeometry} layout="fill"/>
-              </div>
-              <div className='w-20 h-20 md:left-24 bottom-0 -left-10 absolute block'>
-                <Image alt="dots geometry" src={DotsGeometry} layout="fill"/>
-              </div>
-            </div>
-          </div>
-        </div>
+        <About />
+        <Work/>
       </main>
 
       <footer>

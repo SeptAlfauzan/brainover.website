@@ -10,7 +10,7 @@ const Navbar = () => {
     
     return(
         <>
-            <nav className={`md:visible ${active? '' : '-translate-x-full'} md:translate-x-0 transition-all duration-200 w-full md:fixed absolute bg-blue-50 md:bg-white md:h-auto h-screen z-20 `}>
+            <nav className={`md:visible ${active? '' : '-translate-x-full'} md:translate-x-0 transition-all duration-200 w-full md:fixed absolute bg-blue-50 md:bg-white md:h-auto h-screen z-20 text-black`}>
                 <ul className="flex md:flex-row flex-col gap-2 px-10 py-5 justify-center items-center h-full md:h-auto">
                     <li  className="text-xl">
                         <Link href='#'>Home</Link>
