@@ -3,6 +3,7 @@ import Navbar from '../components/navbar'
 import HomeBanner from '../components/sections/homebanner'
 import About from '../components/sections/about'
 import Work from '../components/sections/work'
+import ContactUs from '../components/sections/contactUs'
 
 const Home = () => {
   
@@ -20,6 +21,7 @@ const Home = () => {
         <HomeBanner />
         <About />
         <Work/>
+        <ContactUs/>
       </main>
 
       <footer>

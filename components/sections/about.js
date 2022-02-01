@@ -27,9 +27,9 @@ const About = () => {
         ],
       };
     return(
-        <div className='min-h-screen flex flex-col justify-center items-center relative  overflow-clip'>
-          <div className='md:w-3/4 flex flex-wrap relative  justify-center'>
-            <div className="md:w-1/2 w-full md:pr-28 px-12 z-10 md:order-1 order-2">
+        <div id="about-section" className='min-h-screen flex flex-col justify-center items-center relative  overflow-clip'>
+          <div className='md:w-3/4 flex flex-wrap relative justify-center md:px-0 px-12'>
+            <div className="md:w-1/2 w-full md:pr-28  z-10 md:order-1 order-2">
               <h3 className='text-4xl mb-10 w-full text-black'>Leading the way in our field since 1993</h3>
               <p className='text-lg text-gray-500'>
                 We are the top supplier of cooked, refrigerated prawns to the French market and as such, we are constantly in the process of improving our product offering to cement our position as the go-to player on the seafood products scene. We’ve succeeded in doing this by maintaining a steady course over the last 27 years towards our end destination – a shared taste for innovation!
