@@ -32,23 +32,23 @@ const ContactUs = () => {
         <div id="contact-section" className="w-full min-h-screen flex justify-center">
             <div className="w-3/4">
                 <div className="w-full md:h-3/4 h-full flex flex-wrap">
-                    <div className="md:w-1/2 w-full md:h-full relative flex flex-col">
+                    <div className="md:w-2/5 w-full md:h-full relative flex flex-col">
                         <div className="absolute w-full top-0">
                           <Lottie animationData={CirclesAnim} interactivity={interactivity} />
                         </div>
                         <h3 className="text-4xl md:text-left text-center font-bold relative">Get in touch</h3>
                         <h4 className="text-xl md:text-left text-center relative mt-5 text-slate-500">Contact us so we can help you.</h4>
-                        <div className="flex w-full md:flex-col flex-row gap-3 relative md:flex-grow md:justify-center md:my-0 my-10">
+                        <div className="flex w-full md:flex-col flex-row md:gap-3 gap-0 relative md:flex-grow md:justify-center md:my-0 my-10">
                           <CardSocialMedia icon={InstagramLogo} text={'Instagram'} link={'#'}/>
                           <CardSocialMedia icon={WhatsappLogo} text={'Whatsapp'} link={'#'}/>
                         </div>
                     </div>
-                    <div className="relative w-full my-3">
-                      <p className="text-center border font-semibold text-slate-500">
+                    <div className="relative md:w-1/5 w-full my-3 flex items-center justify-center">
+                      <p className="text-center font-semibold text-slate-500">
                       Or Email Us
                       </p>
                     </div>
-                    <div className="md:w-1/2 w-full relative">
+                    <div className="md:w-2/5 w-full relative">
                       <div className="w-full h-full rounded-lg bg-white shadow-2xl py-8 px-10">
                         <div className="flex flex-col gap-2 mb-5">
                           <label className="font-semibold">Your Name</label>
@@ -63,7 +63,7 @@ const ContactUs = () => {
                           <textarea className="border border-slate-400 p-2 rounded"  type={'email'} placeholder="Plese type your name"/>
                         </div>
                         <div className="flex flex-col gap-2">
-                          <button className="ml-auto w-1/2 bg-teal-300 px-10 py-2 rounded transition-all duration-200 hover:bg-teal-400 hover:text-white">Send Message</button>
+                          <button className="ml-auto w-1/2 bg-teal-300 px-5 py-2 rounded transition-all duration-200 hover:bg-teal-400 hover:text-white">Send Message</button>
                         </div>
                       </div>
                     </div>
