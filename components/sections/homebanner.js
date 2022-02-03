@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
-import MainLogo from '../../public/logo-brainover.svg'
+import MainLogo from '../../public/images/LOGO.png'
 import { gsap } from "gsap";
 
 
@@ -16,10 +16,12 @@ const HomeBanner = () => {
     return (
         <div id="home-section" className='w-full h-screen flex justify-center items-center flex-col'>
           <div className='relative w-2/4 h-2/4 flex flex-col justify-center items-center md:mt-0 -mt-20'>
-            <div className='md:w-96 md:h-96 w-72 h-72 relative bg-blue-50 p-10'>
+            <div className="md:w-96 md:h-96 w-72 h-72 p-8 rounded bg-blue-50 flex justify-center items-center">
+            <div className='w-3/4 h-3/4 relative '>
               <Image src={MainLogo} alt='Brain.over logo' layout='fill'/>
             </div>
-            <div className='absolute md:-left-10 md:top-5 -left-20 -top-1'>
+            </div>
+            <div className='absolute md:-left-10 md:-top-16 -left-20 -top-1'>
               <h3 className='text-8xl md:text-9xl text-gray-700' ref={headerTopRef}>Brain</h3>
             </div>
             <div className='absolute md:right-0 md:-bottom-10 -bottom-1 -right-20'>

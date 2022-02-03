@@ -7,25 +7,25 @@ import Lottie from "lottie-react";
 
 const About = () => {
     const interactivity = {
-        mode: "scroll",
-        actions: [
-          {
-            visibility: [0, 0.2],
-            type: "stop",
-            frames: [0],
-          },
-          {
-            visibility: [0.2, 0.45],
-            type: "seek",
-            frames: [0, 50],
-          },
-          {
-            visibility: [0.45, 1.0],
-            type: "loop",
-            frames: [100],
-          },
-        ],
-      };
+      mode: "scroll",
+      actions: [
+        {
+          visibility: [0, 0.2],
+          type: "stop",
+          frames: [0],
+        },
+        {
+          visibility: [0.2, 0.45],
+          type: "seek",
+          frames: [0, 50],
+        },
+        {
+          visibility: [0.45, 1.0],
+          type: "loop",
+          frames: [100],
+        },
+      ],
+    };
     return(
         <div id="about-section" className='min-h-screen flex flex-col justify-center items-center relative  overflow-clip'>
           <div className='md:w-3/4 flex flex-wrap relative justify-center md:px-0 px-12'>
