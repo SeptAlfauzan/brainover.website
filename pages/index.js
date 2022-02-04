@@ -4,9 +4,12 @@ import HomeBanner from '../components/sections/homebanner'
 import About from '../components/sections/about'
 import Work from '../components/sections/work'
 import ContactUs from '../components/sections/contactUs'
+import React from 'react'
 
 const Home = () => {
-  
+  const greeting = "Made with ❤ by Septa Alfauzan.\nMore information please go to"
+  const myLink = "www.septaalfauzan.xyz"
+  React.useEffect(()=> console.log(greeting, myLink), [])
 
   return (
     <div>

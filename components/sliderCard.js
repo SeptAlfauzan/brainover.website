@@ -1,11 +1,16 @@
-const SliderCard = ({title, description}) => {
+import Image from "next/image"
+
+const SliderCard = ({images, title, description}) => {
     return(
-        <div className="group transition-all duration-200 bg-slate-400 w-76 p-0 m-0 h-80 border rounded-lg relative">
-            <div className=" md:group-hover:-translate-y-full md:translate-y-full md:-bottom-10 bottom-0 transition-all duration-200 absolute m-5">
-                <h3 className="font-bold text-white text-lg">
-                Lorem ipsum
+        <div className="group transition-all duration-200 bg-slate-400 w-76 p-0 m-2 h-80 rounded-lg relative">
+                { images && (<Image layout="fill" src={images} alt={title} />)}
+            <div className=" md:group-hover:-translate-y-0 md:translate-y-full bottom-0 transition-all duration-200 absolute bg-gradient-to-t from-blue-100  to-transparent w-full px-10 pb-5 pt-8">
+                <h3 className="font-bold text-black text-lg">
+                    {title}
                 </h3>
-                Lorem ipsum
+                <p className="text-slate-500">
+                    {description}
+                </p>
             </div>
         </div>
     )
