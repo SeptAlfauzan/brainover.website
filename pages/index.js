@@ -5,8 +5,9 @@ import About from '../components/sections/about'
 import Work from '../components/sections/work'
 import ContactUs from '../components/sections/contactUs'
 import React from 'react'
+import { getDataProjects } from "../lib/dataProjects";
 
-const Home = () => {
+const Home = (props) => {
   const greeting = "Made with ❤ by Septa Alfauzan.\nMore information please go to"
   const myLink = "www.septaalfauzan.xyz"
   React.useEffect(()=> console.log(greeting, myLink), [])
@@ -23,7 +24,7 @@ const Home = () => {
         <Navbar />
         <HomeBanner />
         <About />
-        <Work/>
+        <Work listData={props.listData}/>
         <ContactUs/>
       </main>
 
@@ -31,6 +32,16 @@ const Home = () => {
       </footer>
     </div>
   )
+}
+
+export async function getStaticProps(){
+  const res = await getDataProjects()
+  const listData = JSON.parse(res)
+  return {
+      props: {
+          listData
+      },
+  }
 }
 
 export default Home
