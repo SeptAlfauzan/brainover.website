@@ -24,7 +24,7 @@ const ContactUs = () => {
         method: "POST"
       }
 
-      fetch('http://localhost:3000/api/hello', config).then(res => console.log(res))
+      fetch('https://brainover-website.vercel.app/api/hello', config).then(res => console.log(res))
     }
     const interactivity = {
         mode: "scroll",
