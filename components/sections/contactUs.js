@@ -15,7 +15,16 @@ const ContactUs = () => {
         if(!data.name) return
         formData[data.name] = data.value
       })
-      console.log(formData)
+      
+      const config = {
+        headers: {
+          "content-type":"application/json; charset=UTF-8",
+        },
+        body: JSON.stringify(formData),
+        method: "POST"
+      }
+
+      fetch('http://localhost:3000/api/hello', config).then(res => console.log(res))
     }
     const interactivity = {
         mode: "scroll",
