@@ -1,36 +1,37 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import nodemailer from 'nodemailer'
 
+const nodemailer = require('nodemailer');
 export default async function handler(req, res) {
   console.log("body", req.body)
-
   const transporter = nodemailer.createTransport({
-    port: 465,
-    service: 'smtp.gmail.com',
-    secure: true,
+    host: 'smtp.mailtrap.io',
+    port: 2525,
+    secure: false,
     auth: {
-      secure: true,
       user: process.env.NEXT_PUBLIC_EMAIL_USERNAME,
       pass: process.env.NEXT_PUBLIC_PASSWORD
     },
+    debug: true,
+    logger: true,
   });
 
-  console.log(process.env.NEXT_PUBLIC_EMAIL_USERNAME)
+  console.log(process.env.NEXT_PUBLIC_PASSWORD)
   let mailOptions = {
-    from: 'example@gmail.com',
+    from: '"Example Team" <from@example.com>',
     to: 'alfauzansepta@gmail.com',
     subject: 'Sending email using Node.js',
     text: 'Easy peasy lemon squeezy'
   };
 
-  try {
-    const email = await transporter.sendMail(mailOptions);
-    console.log(email.messageId)
-    res.status(200).json({ email: messageId })
-  } catch (error) {
-    console.log("error", error)
-    res.status(200).json({ error: error })
-  }
+  transporter.verify((err, success) => {
+    if(err) console.log('check error ', err)
+    console.log('config is correct!')
+  });
 
-  res.status(200).json({ name: 'John Doe' })
+  const email = await transporter.sendMail(mailOptions, (err, info) => {
+    if(err) return console.log(err)
+    res.status(200).json({ email: messageId })
+    
+  });
+  res.end()
 }
