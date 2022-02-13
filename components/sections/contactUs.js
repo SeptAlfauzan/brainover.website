@@ -89,37 +89,37 @@ const ContactUs = () => {
           <div className="relative w-full md:w-2/5">
             <form method="POST" onSubmit={handleSubmit}>
               <div className="w-full rounded-lg bg-white py-8 px-10 shadow-2xl">
-                <div className="mb-5 flex flex-col gap-2">
-                  <label className="font-semibold">Your Name</label>
+                <div className="flex flex-col gap-2 relative">
                   <input
                     required
                     name="name"
-                    className="rounded border border-slate-400 p-2"
+                    className="peer rounded border-b-slate-400 border-b  px-2 py-1 placeholder-transparent z-10 bg-transparent"
                     type={"text"}
                     placeholder="Plese type your name"
                   />
+                  <label className="absolute transition-all duration-75 font-medium  peer-placeholder-shown:text-base -top-5 text-gray-700 peer-placeholder-shown:top-2 peer-placeholder-shown:text-gray-500 peer-focus:-top-5 peer-placeholder-focus:text-gray-700">Your Name</label>
                 </div>
-                <div className="mb-5 flex flex-col gap-2">
-                  <label className="font-semibold">E-Mail</label>
+                <div className="flex flex-col gap-2 mt-10 relative">
                   <input
                     required
                     name="email"
-                    className="rounded border border-slate-400 p-2"
+                    className="peer rounded border-b-slate-400 border-b  px-2 py-1 placeholder-transparent z-10 bg-transparent"
                     type={"email"}
                     placeholder="Plese type your name"
                   />
+                  <label className="absolute transition-all duration-75 font-medium  peer-placeholder-shown:text-base -top-5 text-gray-700 peer-placeholder-shown:top-2 peer-placeholder-shown:text-gray-500 peer-focus:-top-5 peer-placeholder-focus:text-gray-700">E-Mail</label>
                 </div>
-                <div className="mb-5 flex flex-col gap-2">
-                  <label className="font-semibold">Message</label>
+                <div className="mb-5 flex flex-col gap-2 mt-10 relative">
                   <textarea
                     required
                     name="message"
-                    className="rounded border border-slate-400 p-2"
-                    type={"email"}
+                    className="peer rounded border-b-slate-400 border-b  px-2 py-1 placeholder-transparent z-10 bg-transparent"
+                    type={"text"}
                     placeholder="Plese type your name"
                   />
+                  <label className="absolute transition-all duration-75 font-medium  peer-placeholder-shown:text-base -top-5 text-gray-700 peer-placeholder-shown:top-7 peer-placeholder-shown:text-gray-500 peer-focus:-top-5 peer-placeholder-focus:text-gray-700">Message</label>
                 </div>
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-2 mt-4">
                   <button className="ml-auto w-1/2 rounded bg-teal-300 px-5 py-2 transition-all duration-200 hover:bg-teal-400 hover:text-white">
                     Send Message
                   </button>
